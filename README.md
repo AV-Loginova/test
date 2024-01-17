@@ -1,5 +1,5 @@
 # Тестовое задание
 Для выполнения пункта 2.6 был создан сервер на express. К нему отправляется get-запрос после нажатия на кнопку.
 
-https://github.com/AV-Loginova/test/assets/129111624/f047cfe1-36c9-4177-8084-105085ebf2f8
+![test](https://github.com/AV-Loginova/test/assets/129111624/9b89ebda-7744-4c85-af29-7efb01aec258)
 
