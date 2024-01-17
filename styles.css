@@ -14,9 +14,13 @@ body {
     width: 100%;
     height: 20vh;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .second-row {
+    height: 20vh;
     display: flex;
 }
 
@@ -29,6 +33,7 @@ body {
 .second-row .second-row-block-mid {
     border: 1px dashed black;
     background-color: #dfbbb2;
+
 }
 
 .swap {
@@ -37,20 +42,25 @@ body {
 
 .second-row-block-left {
     background-color: #5b4c4b;
+
 }
 
 .second-row-block-right {
     background-color: #f2e2d7;
+
 }
 
-
 .third-row {
+    height: 20vh;
     display: flex;
 }
 
 .third-row div {
     height: 20vh;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .third-row-block-small {
@@ -81,9 +91,6 @@ body {
 .hidden {
     display: none;
 }
-
-
-
 
 .input-form {
     width: 30vw;
@@ -120,6 +127,26 @@ body {
 }
 
 .submit-result {
-
     white-space: pre;
+}
+
+@media (orientation: portrait) {
+    .second-row {
+        height: 60vh;
+        flex-direction: column;
+    }
+    .third-row {
+        height: 40vh;
+        flex-direction: column;
+    }
+    .third-row-block-small {
+        flex-grow: 1;
+    }
+
+    .third-row-block-big {
+        flex-grow: 0;
+    }
+    .container-block {
+        height: 120vh;
+    }
 }

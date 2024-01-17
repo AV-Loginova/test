@@ -11,7 +11,9 @@ const url = "http://localhost:3000/";
 let obj = {};
 
 buttonSubmit.addEventListener("click", (e) => {
+  //отменяет перезагрузку страницы по нажатию на кнопку
   e.preventDefault();
+  //добавляет данные из инпутов и списков в объект
   obj = {
     firstList: firstList.value,
     secondList: secondList.value,
@@ -21,14 +23,14 @@ buttonSubmit.addEventListener("click", (e) => {
     firstInput: firstInput.value,
     secondInput: secondInput.value,
   };
+  //делает JSON строку из объекта
   result.textContent = JSON.stringify(obj, null, "\t");
-  fetch(url)
-    .then((res) => {
-      if (res.status === 200) {
-        alert("Success");
-      } else {
-        alert("Failed");
-      }
-    })
-    .catch(alert("Error"));
+  //отправляет GET запрос на сервер
+  fetch(url).then((res) => {
+    if (res.status === 200) {
+      alert("Success");
+    } else {
+      alert("Failed");
+    }
+  });
 });
