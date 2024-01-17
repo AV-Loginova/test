@@ -30,5 +30,5 @@ buttonSubmit.addEventListener("click", (e) => {
         alert("Failed");
       }
     })
-    .catch();
+    .catch(alert("Error"));
 });

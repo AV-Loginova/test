@@ -3,68 +3,63 @@ body {
     padding: 0;
 }
 
-.container-grid div {
+.container-block {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-row div {
+    width: 100%;
     height: 20vh;
     border: 1px solid black;
 }
 
-.container-grid {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-                        "first first first"
-                        "second-l second-m second-r"
-                        "third-s third-b third-b";
+.second-row {
+    display: flex;
 }
 
-.container-grid-swap {
-    width: 100vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-                        "first first first"
-                        "second-m second-l second-r"
-                        "third-s third-b third-b";
+.second-row div {
+    width: 100%;
+    height: 20vh;
+    border: 1px solid black;
 }
 
-
-.first-row-block {
-    grid-area: first;
+.second-row .second-row-block-mid {
+    border: 1px dashed black;
+    background-color: #dfbbb2;
 }
 
-.second-row-block-left, .second-row-block-mid, .second-row-block-right {
-    background-color: rgb(21, 77, 167);
+.swap {
+    order: -1;
 }
 
 .second-row-block-left {
-    grid-area: second-l;
+    background-color: #5b4c4b;
 }
 
-.second-row-block-mid{
-    grid-area: second-m;
-    border-style: dashed;
+.second-row-block-right {
+    background-color: #f2e2d7;
 }
 
-.second-row-block-right{
-    grid-area: second-r;
+
+.third-row {
+    display: flex;
 }
 
-/* .third-row-block-small, .third-row-block-big {
-    background-color: blue;
-} */
+.third-row div {
+    height: 20vh;
+    border: 1px solid black;
+}
 
 .third-row-block-small {
-    grid-area: third-s;
+    flex-basis: 33.33%;
 }
 
 .third-row-block-big {
-    grid-area: third-b;
+    flex-grow: 1;
 }
-
-
 
 .pop-up {
     position: fixed;
@@ -84,9 +79,11 @@ body {
 }
 
 .hidden {
-    opacity: 0;
     display: none;
 }
+
+
+
 
 .input-form {
     width: 30vw;
