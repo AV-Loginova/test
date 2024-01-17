@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-grid div {
+    height: 20vh;
+    border: 1px solid black;
+}
+
+.container-grid {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+                        "first first first"
+                        "second-l second-m second-r"
+                        "third-s third-b third-b";
+}
+
+.container-grid-swap {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+                        "first first first"
+                        "second-m second-l second-r"
+                        "third-s third-b third-b";
+}
+
+
+.first-row-block {
+    grid-area: first;
+}
+
+.second-row-block-left, .second-row-block-mid, .second-row-block-right {
+    background-color: rgb(21, 77, 167);
+}
+
+.second-row-block-left {
+    grid-area: second-l;
+}
+
+.second-row-block-mid{
+    grid-area: second-m;
+    border-style: dashed;
+}
+
+.second-row-block-right{
+    grid-area: second-r;
+}
+
+/* .third-row-block-small, .third-row-block-big {
+    background-color: blue;
+} */
+
+.third-row-block-small {
+    grid-area: third-s;
+}
+
+.third-row-block-big {
+    grid-area: third-b;
+}
+
+
+
+.pop-up {
+    position: fixed;
+    top: 20%;
+    left: 25%;
+    overflow: hidden;
+    width: 50vw;
+    height: 30vh;
+    background-color: white;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.input-form {
+    width: 30vw;
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.input-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit {
+    background-color: rgb(19, 102, 219);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.submit-result-container {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-result {
+
+    white-space: pre;
+}
