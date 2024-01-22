@@ -18,7 +18,7 @@ buttonSubmit.addEventListener("click", (e) => {
   //отправляет get запрос
   fetch(newUrl).then((res) => {
     if (res.status === 200) {
-      alert(`Data successfully send to URL:\n${newUrl}`);
+      alert(`Data successfully sent to URL:\n${newUrl}`);
       newUrl = url;
     } else {
       alert("Fail");
