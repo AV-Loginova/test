@@ -2,7 +2,7 @@ const buttonHide = document.querySelector(".btn-warning");
 const blockHide = document.querySelector(".first-row");
 const buttonSwap = document.querySelector(".btn-success");
 const blockSwap = document.querySelector(".second-row-block-mid");
-const module = document.querySelector(".pop-up");
+const module = document.querySelector(".pop-up-window");
 const buttonClose = document.querySelector(".btn-primary");
 
 //Спрятать блок
@@ -15,12 +15,7 @@ buttonSwap.addEventListener("click", () => {
   blockSwap.classList.toggle("swap");
 });
 
-//Отображение модального окна
-addEventListener("DOMContentLoaded", () => {
-  module.classList.remove("hidden");
-});
-
 //Закрыть модальное окно
 buttonClose.addEventListener("click", () => {
-  module.classList.add("hidden");
+  module.classList.toggle("hidden");
 });
