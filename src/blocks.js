@@ -5,17 +5,17 @@ const blockSwap = document.querySelector(".second-row-block-mid");
 const module = document.querySelector(".pop-up-window");
 const buttonClose = document.querySelector(".btn-primary");
 
+function blockClassToggle(block, blockClass) {
+  return function () {
+    block.classList.toggle(blockClass);
+  };
+}
+
 //Спрятать блок
-buttonHide.addEventListener("click", () => {
-  blockHide.classList.toggle("hidden");
-});
+buttonHide.addEventListener("click", blockClassToggle(blockHide, "hidden"));
 
 //Менять местами блоки
-buttonSwap.addEventListener("click", () => {
-  blockSwap.classList.toggle("swap");
-});
+buttonSwap.addEventListener("click", blockClassToggle(blockSwap, "swap"));
 
 //Закрыть модальное окно
-buttonClose.addEventListener("click", () => {
-  module.classList.toggle("hidden");
-});
+buttonClose.addEventListener("click", blockClassToggle(module, "hidden"));

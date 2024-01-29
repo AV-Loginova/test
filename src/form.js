@@ -3,7 +3,7 @@ const buttonSubmit = document.querySelector(".submit");
 const result = document.querySelector(".submit-result");
 const url = "https://opentdb.com/api.php?";
 
-buttonSubmit.addEventListener("click", (e) => {
+function sendData(e) {
   //отменяет перезагрузку страницы по нажатию на кнопку
   e.preventDefault();
   //создает коллекцию formdata
@@ -24,4 +24,6 @@ buttonSubmit.addEventListener("click", (e) => {
       alert("Fail");
     }
   });
-});
+}
+
+buttonSubmit.addEventListener("click", sendData);

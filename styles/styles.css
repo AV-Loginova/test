@@ -24,13 +24,14 @@ body {
     height: 20vh;
     display: flex;
 }
-
+/* дает рамку каждому див элементу */
 .second-row div {
     width: 100%;
     height: 20vh;
     border: 1px solid black;
 }
 
+/* делает рамку пунктир только у среднего */
 .second-row .second-row-block-mid {
     border: 1px dashed black;
     background-color: #dfbbb2;
